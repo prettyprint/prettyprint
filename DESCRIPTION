@@ -1,0 +1,13 @@
+Package: prettyprint
+Title: Don't Just Print, Pretty Print
+Version: 0.0.0.9000
+Authors@R: person("Pretty", "Print", email="test@test.com", role = c("aut", "cre"))
+URL: https://github.com/prettyprint/prettyprint
+BugReports: https://github.com/prettyprint/prettyprint/issues
+Description: A suite of functions that print values in a way that humans can
+    easily understand.
+Enhances: knitr
+License: GPL-3
+LazyData: true
+RoxygenNote: 5.0.1
+Imports: MASS
