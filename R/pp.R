@@ -1,13 +1,10 @@
 ## Main call
-#' Pretty print any object. 
-#'
-#' @param x An object to print.
-#' @param both Show both, the \code{print} (unformatted) version and the formatted version of \code{x}? FALSE (default) only shows the formatted version.
-#' @param signif.digits Integer indicating the number of significant digits to be used, or NA. Ignored if round.digits is not NA. See \code{\link[base]{signif}}. 
-#' @param round.digits Integer indicating the number of decimal places to be used, or NA. NA (default) means that \code{signif.digits} is used. See \code{\link[base]{round}}. 
-#' @param format.params Parameters passed to \code{\link[base]{format}}. 
+#' @title Pretty print any object. 
 #' 
-#' @section Details:
+#' @description
+#' Print values in a way that humans can easily understand.
+#'
+#' @details
 #' At its core, \code{pp} is a wrapper around \code{\link[base]{signif}}, \code{\link[base]{round}}, and \code{\link[base]{format}}. Currently, methods are defined for the following classes: 
 #' \itemize{
 #' 	\item integer, numeric
@@ -17,10 +14,18 @@
 #' 	\item lm, glm (prints odds ratios for logistic regression)
 #' 	\item AsIs (output from \code{\link[base]{I}})
 #' 	\item list
+#' 	\item pprop (output from \code{\link{pprop}} -- ``pretty proportion'')
 #' }
 #'
+#' @param x An object to print.
+#' @param both Show both, the \code{print} (unformatted) version and the formatted version of \code{x}? FALSE (default) only shows the formatted version.
+#' @param signif.digits Integer indicating the number of significant digits to be used, or NA. Ignored if round.digits is not NA. See \code{\link[base]{signif}}. 
+#' @param round.digits Integer indicating the number of decimal places to be used, or NA. NA (default) means that \code{signif.digits} is used. See \code{\link[base]{round}}. 
+#' @param format.params Parameters passed to \code{\link[base]{format}}. 
+#' 
 #' @return \code{pp} prints \code{x}. Do not rely on the value, if any, that \code{pp} might return. 
 #' 
+#' @family pretty-print functions
 #' @seealso \code{\link[base]{print}}, \code{\link[base]{signif}}, \code{\link[base]{round}}, \code{\link[base]{format}}, \code{\link[base]{summary}}. 
 #' @keywords print utilities
 #' 

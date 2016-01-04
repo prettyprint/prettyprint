@@ -23,10 +23,9 @@ pp(x = NA, both = FALSE, signif.digits = getOption("pp.signif.digits"),
 \code{pp} prints \code{x}. Do not rely on the value, if any, that \code{pp} might return.
 }
 \description{
-Pretty print any object.
+Print values in a way that humans can easily understand.
 }
-\section{Details}{
-
+\details{
 At its core, \code{pp} is a wrapper around \code{\link[base]{signif}}, \code{\link[base]{round}}, and \code{\link[base]{format}}. Currently, methods are defined for the following classes: 
 \itemize{
 	\item integer, numeric
@@ -36,6 +35,7 @@ At its core, \code{pp} is a wrapper around \code{\link[base]{signif}}, \code{\li
 	\item lm, glm (prints odds ratios for logistic regression)
 	\item AsIs (output from \code{\link[base]{I}})
 	\item list
+	\item pprop (output from \code{\link{pprop}} -- ``pretty proportion'')
 }
 }
 \examples{
@@ -81,6 +81,8 @@ pp(mylogit)	# Odds ratios, 95\% CI's
 }
 \seealso{
 \code{\link[base]{print}}, \code{\link[base]{signif}}, \code{\link[base]{round}}, \code{\link[base]{format}}, \code{\link[base]{summary}}.
+
+Other pretty.print.functions: \code{\link{pp.pprop}}
 }
 \keyword{print}
 \keyword{utilities}
