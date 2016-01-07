@@ -130,13 +130,16 @@ pprop = function(prop,
 		
 		if (denom1) {
 			prop.char = paste( c(prefix, 
-				.pp1(ret1$num, signif.digits=NA, round.digits=NA, format.params=getOption("pp.format.params"))), 
+				.pp1(ret1$num, digits=NA, signif.digits=NA, 
+					round.digits=NA, format.params=getOption("pp.format.params"))), 
 				collapse=" ")
 		} else {
 			prop.char = paste( c(prefix, 
-				.pp1(ret1$num, signif.digits=NA, round.digits=NA, format.params=getOption("pp.format.params")), 
+				.pp1(ret1$num, digits=NA, signif.digits=NA, 
+					round.digits=NA, format.params=getOption("pp.format.params")), 
 				"/", 
-				.pp1(ret1$denom, signif.digits=NA, round.digits=NA, format.params=getOption("pp.format.params"))), 
+				.pp1(ret1$denom, digits=NA, signif.digits=NA, 
+					round.digits=NA, format.params=getOption("pp.format.params"))), 
 				collapse=" ")			
 		}
 		ret$prop.char[ii] = prop.char

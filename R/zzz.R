@@ -3,6 +3,7 @@
 	op <- options()
 	op.my <- list(
 		## pp
+		pp.digits = NA, 
 		pp.signif.digits = 3,
 		pp.round.digits = NA,
 		pp.format.params = list(trim=TRUE, scientific=7, big.mark=",", small.mark="'"), 
